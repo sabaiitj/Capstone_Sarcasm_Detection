@@ -20,7 +20,7 @@ The first issue we have is that, unlike sentiment analysis, where sentiment cate
     
 Sarcasm is subjective. Non-native speakers/readers may not get it. So it is a use case for sarcasm detection and was my motive to take up this project.
 
-**I am going to use a very popular news headlines dataset for this task.**
+I am going to the news headlines dataset for this task.
 
 ## Notebook Descriptions
 
