@@ -117,7 +117,7 @@ After preprocessing, text was vectorized using CountVectorizer functionality of 
 
 Top 100 features were selected and used to model. Two models were run-Random Forest Classifier and Logistic Regression, as this being a classification problem. The top features for Random Forest Classifier are as follows:
 
-![Random-Forest-Model](./images/rfselectkbest.png)
+![Random-Forest-Model](./images/randomforestselectkbest.png)
 
 The top features for Logistic Regression Classification are as follows:
 
