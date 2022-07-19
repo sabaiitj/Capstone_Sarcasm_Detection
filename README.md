@@ -59,7 +59,7 @@ project-2
 |   |__ Vectorized_Data.csv
 |   |__ PCA_All_Data.csv
 |__ presentations
-    |__capstone_presentation.pdf
+|    |__capstone_presentation.pdf
 |__ README.md
 
 ```
