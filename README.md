@@ -52,7 +52,6 @@ project-2
 |   |__ rfselectkbest.jpg
 |   |__ logisticregselectkbest.png
 |   |__ BERTexplained.png
-|   |__ prompt_2_output.png
 |__ data
 |   |__ Sarcasm_Headlines_Dataset.json
 |   |__ Preprocessed_headlines.csv
