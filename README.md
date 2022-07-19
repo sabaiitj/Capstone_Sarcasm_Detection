@@ -7,7 +7,7 @@
 - [Notebook Descriptions](#Notebook-Descriptions)
 - [Data Collection](#Data-Collection)
 - [EDA](#EDA)
-- [Data Processing and Cleaning](#Data Processing and Cleaning)
+- [Data Processing and Cleaning](#Data-Processing-and-Cleaning)
 - [Modeling](#Modeling)
 - [Results and Conclusions](#Results-and-Conclusions)
 - [Future Enhancements](#Future-Enhancements)
