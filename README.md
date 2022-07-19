@@ -32,42 +32,28 @@ Sarcasm is subjective. Non-native speakers/readers may not get it. So it is a us
 ```
 project-2
 |__ code
-|   |__ 01_Musicals_Collection.ipynb
-|   |__ 02_Synopsis_Collection.ipynb
-|   |__ 03_Summary_Collection.ipynb
-|   |__ 04_Data_Concatenation.ipynb
-|   |__ 05_EDA_and_Cleaning.ipynb
-|   |__ 06_Sentiment_Analysis.ipynb
-|   |__ 07_Recommender_System.ipynb
-|__ assets
-|   |__ spacy_architecture.png
-|   |__ spacy_cosine_similarity.png
-|   |__ musicals.jpg
-|   |__ prompt_1_input.png
-|   |__ prompt_1_output.png
-|   |__ prompt_2_input.png
+|   |__ 01_EDA and Preprocessing of headlines.ipynb
+|   |__ 02_Vectorization(NLP).ipynb
+|   |__ 03_Model-Building_Select_K_Best.ipynb
+|   |__ 04_Model_Building_with_PCA.ipynb
+|   |__ 05_BERT.ipynb
+|__ images
+|   |__ countofsarcastic.png
+|   |__ source.png
+|   |__ countofpunctuation.png
+|   |__ rfselectkbest.jpg
+|   |__ logisticregselectkbest.png
+|   |__ BERTexplained.png
 |   |__ prompt_2_output.png
 |__ data
-|   |__ musical_names.csv
-|   |__ musical_synopses.csv
-|   |__ musical_summaries.csv
-|   |__ musical_data.csv
-|   |__ musical_vectors.csv
-|   |__ dbscan_labels.csv
-|   |__ kmeans_labels.csv
-|   |__ musical_data_vectors_labels.csv
-|   |__ musical_sentiments.csv
-|   |__ musical_for_app.csv
-|__ static
-|   |__ css
-|   |__ |__ style.css
-|__ templates
-|   |__ form.html
-|   |__ results.html
-|__ app.py
-|__ showmetunes.py
-|__ capstone_presentation.pdf
+|   |__ Sarcasm_Headlines_Dataset.json
+|   |__ Preprocessed_headlines.csv
+|   |__ Vectorized_Data.csv
+|   |__ PCA_All_Data.csv
+|__ presentations
+    |__capstone_presentation.pdf
 |__ README.md
+
 ```
 
 ## Notebook Descriptions
@@ -87,7 +73,7 @@ Pandas, Plotly, Sci-Kit Learn, Numpy, MatPlotLib, Seaborn,Keras
 I am going to the news headlines dataset for this task which was found on Kaggle https://www.kaggle.com/datasets/rmisra/news-headlines-dataset-for-sarcasm-detection.
 Each record consists of three attributes:
 
--`is_sarcastic`: 1 if the record is sarcastic otherwise 0
+- `is_sarcastic`: 1 if the record is sarcastic otherwise 0
 - `headline`: the headline of the news article
 - `article_link`: link to the original news article. Useful in collecting supplementary data
 
@@ -109,7 +95,7 @@ Also all the sarcastic headlines came from theonion and non-sarcastic headlines 
 
 Then some metafeatures were created to capture information about text namely, `num_words`, `num_unique_words`, `num_chars`, `num_stopwords`, `num_punctuations` and `mean_word_len`. It was found that number of punctuations had significant difference between two classes of target as seen below. Non-sarcastic text had more punctuations.
 
-![](./images/countofpunctuations.png)
+![](./images/countofpunctuation.png)
 
 It was quite contrary to expectations of finding more punctuations in sarcastic text, which suggests that in professional writing sarcasm is expressed through wordplay rather than punctuation, hence context would be really important for prediction.
 
@@ -128,11 +114,15 @@ After preprocessing, text was vectorized using CountVectorizer functionality of 
 
 ## Modeling
 
-Top 100 features were selected and used to model. Two models were run-Random Forest Classifier and Logistic Regression, as this being a classification problem. The accuracy was found to lie wihin 60%-66% which is 4 to 10% higher than the baseline of 56%.
+Top 100 features were selected and used to model. Two models were run-Random Forest Classifier and Logistic Regression, as this being a classification problem. The top features for Random Forest Classifier are as follows:
 
 ![Random-Forest-Model](./images/rfselectkbest.png)
 
+The top features for Logistic Regression Classification are as follows:
+
 ![Logistic-Regression](./images/logisticregselectkbest.png)
+
+The accuracy was found to lie wihin 60%-66% which is 4 to 10% higher than the baseline of 56%.
 
 PCA could be a useful tool for feature selection and processing. hence it was used to see whether there is any improvement. there was none unfortunately. Infact it performed worse than the two models earlier.
 
@@ -144,7 +134,7 @@ The process can be visualised as in the following image.
 
 ![BERT-explained](./images/BERTexplained.png)
 
- The resulting accuracy was around 77% after 5 epochs, which is 18% higher than the baseline, which is a significant improvement.
+The resulting accuracy was around 77% after 5 epochs, which is 18% higher than the baseline, which is a significant improvement.
 
  
 ## Results and Conclusions
