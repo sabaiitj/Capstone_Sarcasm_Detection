@@ -59,11 +59,11 @@ project-2
 
 ## Notebook Descriptions
 
-1. 01_EDA and Preprocessing of headlines.ipynb : Carried out EDA and preprocessing in this notebook
-2. 02_Vectorization(NLP).ipynb : vectorised the preprocessed headlines in this notebook using CountVectorizer()
-3. 03_Model-Building_Select_K_Best.ipynb : Modeled randomforestclassifier and logistic regression algorithm on the processed data in this notebook by slecting top  100 features
-4. 04_Model_Building_with_PCA.ipynb : Modeled randomforestclassifier on data in this notebook after transforming it with PCA
-5. 05_BERT.ipynb : implemented a basic BERT model in this notebook
+- 01_EDA and Preprocessing of headlines.ipynb : Carried out EDA and preprocessing in this notebook
+- 02_Vectorization(NLP).ipynb : vectorised the preprocessed headlines in this notebook using CountVectorizer()
+- 03_Model-Building_Select_K_Best.ipynb : Modeled randomforestclassifier and logistic regression algorithm on the processed data in this notebook by slecting top  100 features
+- 04_Model_Building_with_PCA.ipynb : Modeled randomforestclassifier on data in this notebook after transforming it with PCA
+- 05_BERT.ipynb : implemented a basic BERT model in this notebook
 
 **Software Recommendations**
 Pandas, Plotly,nltk, Sci-Kit Learn, Numpy, MatPlotLib, Seaborn,Keras
