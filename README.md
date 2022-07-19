@@ -1,13 +1,16 @@
 # Sarcasm Detection
 
 ## Contents
-
+- [Executive Summary](#Executive-Summary)
 - [Introduction](#Introduction)
-- [Data](#Data)
+- [Project Directory](#Project-Directory)
 - [Notebook Descriptions](#Notebook-Descriptions)
+- [Data Collection](#Data-Collection)
+- [EDA](#EDA)
+- [Data Processing and Cleaning](#Data Processing and Cleaning)
+- [Modeling](#Modeling)
 - [Results and Conclusions](#Results-and-Conclusions)
 - [Future Enhancements](#Future-Enhancements)
-- [Executive Summary](#Executive-Summary)
 - [References](#References)
 
 ## Executive Summary
