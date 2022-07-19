@@ -16,9 +16,7 @@
 ## Executive Summary
 
 A dataset consisting of news headlines was used to model in this project. There are two sources of the headlines-theonion and huffingtonpost. Since these are written by professionals, spelling errors are likely to be very less. Theonion is known for their sarcastic headlines here too all sarcastic headlines came from theonion and rest came from huffingtonpost. An exploratory data analysis was done on the dataset and certain new metafeatures were created to be used for 
-modeling. Then the headlines were vectorized and then used in two models namely-RandomForestClassifier and Logistic regression. The scores for classical ML methods are quite low at around 62%- 65%. So I used PCA on the vectorized data to check for the possibility of better prediction accuracy. However, not much was achieved
-in this process. This is because these methods are not accounting for the context in the text. So using a method which takes into account the
-context would likely give better accuracy scores. So I implemented a basic BERT model. BERT is bidirectional and this characteristic allows the model to learn the context of a word based on all of its surroundings. BERT produced best scores among all models. So it is recommended as the production model.
+modeling. Then the headlines were vectorized and then used in two models namely-RandomForestClassifier and Logistic regression. The scores for classical ML methods are quite low at around 62%- 65%. So PCA was used on the vectorized data before modeling to check for the possibility of better prediction accuracy. However, not much was achieved in this process. This is because these methods are not accounting for the context in the text. So using a method which takes into account the context would likely give better accuracy scores. So I implemented a basic BERT model. BERT is bidirectional and this characteristic allows the model to learn the context of a word based on all of its surroundings. BERT produced best scores among all models. So it is recommended as the production model.
 
 ## Introduction
 
