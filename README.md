@@ -68,7 +68,7 @@ project-2
 5. 05_BERT.ipynb : implemented a basic BERT model in this notebook
 
 **Software Recommendations**
-Pandas, Plotly, Sci-Kit Learn, Numpy, MatPlotLib, Seaborn,Keras
+Pandas, Plotly,nltk, Sci-Kit Learn, Numpy, MatPlotLib, Seaborn,Keras
 
 
 ## Data Collection
