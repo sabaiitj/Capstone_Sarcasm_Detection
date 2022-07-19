@@ -3,6 +3,7 @@
 ## Contents
 
 - [Introduction](#Introduction)
+- [Data](#Data)
 - [Notebook Descriptions](#Notebook-Descriptions)
 - [Results and Conclusions](#Results-and-Conclusions)
 - [Future Enhancements](#Future-Enhancements)
@@ -20,18 +21,56 @@ The first issue we have is that, unlike sentiment analysis, where sentiment cate
     
 Sarcasm is subjective. Non-native speakers/readers may not get it. So it is a use case for sarcasm detection and was my motive to take up this project.
 
-I am going to the news headlines dataset for this task.
+## Project Directory
 
+project-6
+|__ code
+|   |__ 01_Musicals_Collection.ipynb
+|   |__ 02_Synopsis_Collection.ipynb
+|   |__ 03_Summary_Collection.ipynb
+|   |__ 04_Data_Concatenation.ipynb
+|   |__ 05_EDA_and_Cleaning.ipynb
+|   |__ 06_Sentiment_Analysis.ipynb
+|   |__ 07_Recommender_System.ipynb
+|__ assets
+|   |__ spacy_architecture.png
+|   |__ spacy_cosine_similarity.png
+|   |__ musicals.jpg
+|   |__ prompt_1_input.png
+|   |__ prompt_1_output.png
+|   |__ prompt_2_input.png
+|   |__ prompt_2_output.png
+|__ data
+|   |__ musical_names.csv
+|   |__ musical_synopses.csv
+|   |__ musical_summaries.csv
+|   |__ musical_data.csv
+|   |__ musical_vectors.csv
+|   |__ dbscan_labels.csv
+|   |__ kmeans_labels.csv
+|   |__ musical_data_vectors_labels.csv
+|   |__ musical_sentiments.csv
+|   |__ musical_for_app.csv
+|__ static
+|   |__ css
+|   |__ |__ style.css
+|__ templates
+|   |__ form.html
+|   |__ results.html
+|__ app.py
+|__ showmetunes.py
+|__ capstone_presentation.pdf
+|__ README.md
 ## Notebook Descriptions
 
-1. EDA and Preprocessing of headlines.ipynb : Carried out EDA and preprocessing in this notebook
-2. Vectorization(NLP).ipynb : vectorised the preprocessed headlines in this notebook using CountVectorizer()
-3. Model-Building_Select_K_Best.ipynb : Modeled randomforestclassifier and logistic regression algorithm on the processed data in this notebook by slecting top        100 features
-4. Model_Building_with_PCA.ipynb : Modeled randomforestclassifier on data in this notebook after transforming it with PCA
-5. BERT.ipynb : implemented a basic BERT model in this notebook
+1. 01_EDA and Preprocessing of headlines.ipynb : Carried out EDA and preprocessing in this notebook
+2. 02_Vectorization(NLP).ipynb : vectorised the preprocessed headlines in this notebook using CountVectorizer()
+3. 03_Model-Building_Select_K_Best.ipynb : Modeled randomforestclassifier and logistic regression algorithm on the processed data in this notebook by slecting top  100 features
+4. 04_Model_Building_with_PCA.ipynb : Modeled randomforestclassifier on data in this notebook after transforming it with PCA
+5. 05_BERT.ipynb : implemented a basic BERT model in this notebook
 
 **Software Recommendations**
-Pandas, Sci-Kit Learn, Numpy, MatPlotLib, Seaborn,Keras
+Pandas, Plotly, Sci-Kit Learn, Numpy, MatPlotLib, Seaborn,Keras
  
 ## Results and Conclusions 
 
@@ -44,14 +83,38 @@ Pandas, Sci-Kit Learn, Numpy, MatPlotLib, Seaborn,Keras
 
 ## Future Enhancements
 
-I would like to explore deep learning methods more to increase the prediction accuracy and work on generalizing the results to any text. 
+I would like to explore more and better deep learning methods more to increase the prediction accuracy and work on generalizing the results to any text. 
 
 ## Executive Summary
 
 A dataset consisting of news headlines was used to model in this project. There are two sources of the headlines-theonion and huffingtonpost. Since these are written by professionals, spelling errors are likely to be very less. Theonion is known for their sarcastic headlines here too all sarcastic headlines came from theonion and rest came from huffingtonpost. An exploratory data analysis was done on the dataset and certain new metafeatures were created to be used for 
-modeling. Then the headlines were vectorized and then used in two models namely-RandomForestClassifier and Logistic regression. The scores for classical ML methods are quite low at around 62.5%- 65%. So I used PCA on the vectorized data to check for the possibility of better prediction accuracy. However, not much was achieved
+modeling. Then the headlines were vectorized and then used in two models namely-RandomForestClassifier and Logistic regression. The scores for classical ML methods are quite low at around 62%- 65%. So I used PCA on the vectorized data to check for the possibility of better prediction accuracy. However, not much was achieved
 in this process. This is because these methods are not accounting for the context in the text. So using a method which takes into account the
-context would likely give better accuracy scores. So I implemented a basic BERT model. BERT is bidirectional and this characteristic allows the model to learn the context of a word based on all of its surroundings. BERT produced best scores among all models. So I recommend this as the production model.
+context would likely give better accuracy scores. So I implemented a basic BERT model. BERT is bidirectional and this characteristic allows the model to learn the context of a word based on all of its surroundings. BERT produced best scores among all models. So it is recommended as the production model.
+
+## Data Collection
+
+I am going to the news headlines dataset for this task which was found on Kaggle https://www.kaggle.com/datasets/rmisra/news-headlines-dataset-for-sarcasm-detection.
+Each record consists of three attributes:
+
+-`is_sarcastic`: 1 if the record is sarcastic otherwise 0
+- `headline`: the headline of the news article
+- `article_link`: link to the original news article. Useful in collecting supplementary data
+
+## EDA
+It was found that the dataset is fairly balanced but not perfectly balanced so we will need to stratify for target as seen in the following graph.
+
+![](./images/source.png)
+
+## Data Processing
+The data to be processed is textual. Various NLP libraries were used to process the data namely,
+- [spaCy](https://spacy.io/): most of the processing (extracting important words, word vectorization/embedding)
+- [Regex](https://docs.python.org/3/library/re.html): removing punctuation
+- [nltk](https://www.nltk.org/): removing stopwords, tokenizing
+- [Sci-kit learn](https://scikit-learn.org/): CountVectorizer
+
+spaCy had POS(Parts of Speech) functionality to offer, which was used to create metafeatures representing the proportions of various POS in a sentence. 
+Regex was used to find patterns of text and 
 
 ## References
 
