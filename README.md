@@ -46,8 +46,8 @@ project-2
 |   |__ 04_Model_Building_with_PCA.ipynb
 |   |__ 05_BERT.ipynb
 |__ images
-|   |__ countofsarcastic.png
-|   |__ source.png
+|   |__ countsarcasticnonsarcastic.png
+|   |__ sourceofheadlines.png
 |   |__ countofpunctuation.png
 |   |__ rfselectkbest.jpg
 |   |__ logisticregselectkbest.png
@@ -93,7 +93,7 @@ Each record consists of three attributes:
 It was found that the dataset is fairly balanced but not perfectly balanced so we will need to stratify for target as seen in the following graph.
 
 <img
-  src="./images/countoftarget.png"
+  src="./images/countsarcasticnonsarcastic.png"
   alt="Distribution of Sarcastic Headlines"
   title="Distribution of Sarcastic Headlines"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
@@ -102,7 +102,7 @@ There were no nulls in the initial dataset and there were 36599 unique words and
 
 Also all the sarcastic headlines came from theonion and non-sarcastic headlines came from huffington post as seen below.
 
-![](./images/source.png)
+![](./images/sourceofheadlines.png)
 
 Then some metafeatures were created to capture information about text namely, `num_words`, `num_unique_words`, `num_chars`, `num_stopwords`, `num_punctuations` and `mean_word_len`. It was found that number of punctuations had significant difference between two classes of target as seen below. Non-sarcastic text had more punctuations.
 
@@ -172,9 +172,11 @@ I would like to explore more and better deep learning methods more to increase t
 
 ## References
 
-1. https://medianism.org/2015/01/08/sarcasm-marks-we-dont-do-no-stinking-sarcasm/m
-2. https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270    
-3. https://www.analyticsvidhya.com/blog/2021/12/text-classification-using-bert-and-tensorflow/ 
-4. https://towardsdatascience.com/multi-label-text-classification-using-bert-and-tensorflow-d2e88d8f488d
+1. https://www.tensorflow.org/text/tutorials/classify_text_with_bert
+2. https://keras.io/getting_started/faq/#why-is-my-training-loss-much-higher-than-my-testing-loss
+3. https://medianism.org/2015/01/08/sarcasm-marks-we-dont-do-no-stinking-sarcasm/m
+4. https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270    
+5. https://www.analyticsvidhya.com/blog/2021/12/text-classification-using-bert-and-tensorflow/ 
+6. https://towardsdatascience.com/multi-label-text-classification-using-bert-and-tensorflow-d2e88d8f488d
 
 
