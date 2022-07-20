@@ -158,7 +158,10 @@ The process can be visualised as in the following image.
 
 The resulting accuracy was around 80% after 5 epochs, which is 24% higher than the baseline, which is a significant improvement as seen in the following graph.
 
-![BERT-accuracy](./images/accuracyBERT.png)
+![BERT-accuracy](./images/accuracyBERT.png) 
+
+The best test accuracy is achieved at epoch=3.Val accuracy is always larger than train accuracy. Regularization mechanisms, such as Dropout and L1/L2 weight regularization, are turned off at testing time. They are reflected in the training time loss but not in the test time loss. Also, the testing loss for an epoch is computed using the model as it is at the end of the epoch, resulting in a lower loss.
+
 
 
 ---
