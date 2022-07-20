@@ -52,6 +52,12 @@ project-2
 |   |__ rfselectkbest.jpg
 |   |__ logisticregselectkbest.png
 |   |__ BERTexplained.png
+|   |__accuracyBERT.png
+|   |__BERTconfusionmatrix.png
+|   |__cumulativevariance.png
+|   |__explainedvariance.png
+|   |__lrconfusionmatrix.png
+|   |__rfconfusionmatrix.png
 |__ data
 |   |__ Sarcasm_Headlines_Dataset.json
 |   |__ Preprocessed_headlines.csv
@@ -139,7 +145,7 @@ The top features for Logistic Regression Classification are as follows:
 
 The accuracy was found to lie wihin 60%-66% which is 4 to 10% higher than the baseline of 56%.
 
-PCA could be a useful tool for feature selection and processing. hence it was used to see whether there is any improvement. there was none unfortunately. Infact it performed worse than the two models earlier.
+Principal component analysis (PCA) is a technique used to emphasize variation and bring out strong patterns in a dataset. PCA could be a useful tool for feature selection and processing. It's often used to make data easy to explore and visualize.Hence it was used to see whether there is any improvement. there was none unfortunately. Infact it performed worse than the two models earlier.
 
 As discussed earlier, prediction of sarcasm is very contextual. Hence a model which can take into account the context of the text is likely to perform better. So a BERT model was attempted.
 
@@ -149,7 +155,9 @@ The process can be visualised as in the following image.
 
 ![BERT-explained](./images/BERTexplained.png)
 
-The resulting accuracy was around 77% after 5 epochs, which is 18% higher than the baseline, which is a significant improvement.
+The resulting accuracy was around 80% after 5 epochs, which is 24% higher than the baseline, which is a significant improvement as seen in the following graph.
+![BERT-accuracy](./images/accuracyBERT.png)
+
 
 ---
  
@@ -178,5 +186,6 @@ I would like to explore more and better deep learning methods more to increase t
 4. https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270    
 5. https://www.analyticsvidhya.com/blog/2021/12/text-classification-using-bert-and-tensorflow/ 
 6. https://towardsdatascience.com/multi-label-text-classification-using-bert-and-tensorflow-d2e88d8f488d
+7. https://www.lexalytics.com/blog/machine-learning-natural-language-processing/
 
 
