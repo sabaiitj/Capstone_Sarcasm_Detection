@@ -12,6 +12,7 @@
 - [Results and Conclusions](#Results-and-Conclusions)
 - [Future Enhancements](#Future-Enhancements)
 - [References](#References)
+- [Applications](#Applications)
 
 ---
 
@@ -156,6 +157,7 @@ The process can be visualised as in the following image.
 ![BERT-explained](./images/BERTexplained.png)
 
 The resulting accuracy was around 80% after 5 epochs, which is 24% higher than the baseline, which is a significant improvement as seen in the following graph.
+
 ![BERT-accuracy](./images/accuracyBERT.png)
 
 
@@ -177,6 +179,15 @@ The resulting accuracy was around 80% after 5 epochs, which is 24% higher than t
 I would like to explore more and better deep learning methods more to increase the prediction accuracy and work on generalizing the results to any text. There are various BERT implementations possible, it would be worthwhile to use them for this project. For example, there is a fast encoder possible which enhances the speed of model.
 
 ---
+
+## Applications
+
+- This analysis can be used to design intelligent chatbots
+- Can help in adding emotions into voice detection systems
+- E-commerce websites can use such it to have a better understanding of product/service reviews posted by users
+
+---
+
 
 ## References
 
